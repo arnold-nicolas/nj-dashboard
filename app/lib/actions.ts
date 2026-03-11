@@ -35,8 +35,8 @@ export async function createInvoice(formData: FormData) {
     } catch(error) {
         console.error(error);
         return {
-            message: "Database Error: Failed to Create Invoice.";
-        }
+            message: "Database Error: Failed to Create Invoice."
+        };
     }
 
     revalidatePath('/dashboard/invoices');
@@ -60,8 +60,8 @@ export async function updateInvoice(id: string, formData: FormData) {
     } catch(error) {
         console.error(error);
         return {
-            message: "Database Error: Failed to Update an Invoice.";
-        }
+            message: "Database Error: Failed to Update an Invoice."
+        };
     }
 
     revalidatePath('/daashboard/invoices');
@@ -74,8 +74,8 @@ export async function deleteInvoice(id: string) {
     } catch(error) {
         console.error(error);
         return {
-            message: "Database Error: Failed to delete an Invoice.";
-        }
+            message: "Database Error: Failed to delete an Invoice."
+        };
     }
 
     revalidatePath('/dashboard/invoices');
